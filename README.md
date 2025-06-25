@@ -22,3 +22,5 @@ With our cleaned data, we're ready to create data visualizations in ggplot2. A b
 With a social media audience in mind we produce two versions of the plots, one 16x9 and another 1x1 (square) to suit the image requirements of different platforms.
 
 With 20 drivers and colours, these visuals are still busy. So we can use gghighlight to spotlight specifc drivers or teams to call out specific stories, highlighting only the geom_lines and geom_points relevant to the narrative we want to call out.
+
+<img src="https://github.com/TurnerHaa/f1-charts/blob/main/images/Singapore.png" width="50%" height="50%">
