@@ -13,8 +13,12 @@ Many sites list the final results of F1 races, but not as many provide positions
 
 The default settings for the page don't show the full number of laps, so we have to set the page limit to 'all' and grab the updated url that appears in Chrome's Dev Tools > Network page
 
+<img src="https://github.com/TurnerHaa/f1-charts/blob/main/process-pics/obtain-data.png" height="30%">
+
 ## Data cleaning/analysis
 We scrape the data from our url using rvest, creating a data frame that at first matches the structure seen on Motorsport.com. Then, we clean the data to make it more user friendly like changing driver numbers to driver namesm mutating additional columns for driver's teams and adding shades of each team's colours as a column for each driver for scaling colour values when we visualize.
+
+<img src="https://github.com/TurnerHaa/f1-charts/blob/main/process-pics/cleaning-data.png"  height="30%">
 
 ## Result
 With our cleaned data, we're ready to create data visualizations in ggplot2. A bump chart is the obvious choice, essentially reflecting the 'rank' of each driver every lap. Alternating background rectangles help distinguish every 10 laps and we've introduced a 'DNF' vector for drivers who don't complete the race (crashes, malfunctions, forfeits). These are treated differently in the visualization, marked with a diamond on the respective lap they end on.
