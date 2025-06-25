@@ -84,7 +84,7 @@ driverLookup <- c(
 Race <- Race |> 
   mutate(across(starts_with("P"), ~driverLookup[.]))
 
-# Pivot longer and add new columns (intorudicng NAs by coercion)
+# Pivot longer and add new columns
 Race <- Race |> 
   pivot_longer(cols = P1:P20, names_to = "Position", values_to = "Driver") |> 
   mutate(
